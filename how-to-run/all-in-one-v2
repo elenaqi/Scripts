@@ -1,0 +1,18 @@
+Тут по подробнее чем в оригинале опишу как запускать скрипт https://github.com/zaivanza/all-in-one-v2
+```bash
+sudo apt update && sudo apt upgrade -y
+git clone https://github.com/zaivanza/all-in-one-v2
+
+dir
+cd all-in-one-v2
+apt install python3-pip
+pip install telebot
+pip3 install -r requirements.txt
+# pip install web3==6.2
+
+# так как теперь режим запуска скрипта интерактивный то надо запускать в tmux
+sudo apt update && sudo apt install tmux -y
+tmux new -s aio
+cd /root/all-in-one-v2
+python3 main.py
+```
